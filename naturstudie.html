@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Hae-Won Park</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Diese Webseite zeigt die Kunstwerke von Haewon Park" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />  document font -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="scripts/webpageNav.js" defer></script>
+	</head>
+
+	<body dir="ltr">
+		<div class="startpage">
+			
+			<header>
+				<h1 class="site-title">Haewon Park</h1>
+			</header>		
+			
+			<nav>
+				<!-- Navigation bar for computer/ laptop -->
+				<div class="navigation" id="myTopnav">			
+					<a href="index.html">Start</a>
+					<a href="vita.html">Vita</a>
+					<div class="dropdown">
+						<!-- <a href="#">Werke <i class="fa fa-caret-down"></i></a> -->
+						<button onclick="openDropdown()" class="dropbtn">Werke</button> <!-- <i class="fa fa-caret-down"></i></button> -->
+						<div id="drop" class="dropdown-content">
+							<a href="naturstudie.html" class="active">Naturstudie</a>
+							<a href="moment.html">Moment</a>
+							<a href="#">Installation</a>
+							<a href="gedanken.html">Gedanken</a>
+						</div>
+					</div>					
+					<a href="kontakt.html">Kontakt</a>
+					<a href="#">Datenschutz</a>					
+				</div>
+				<!-- Navigation bar for mobile phones-->
+				<div class="mobileNav">
+					<div class="rightAlign">
+						<a href="javascript:void(0);" id="mobNavOpen" onclick="myFunction()"><i class="fa fa-bars"></i></a> 
+						<a href="javascript:void(0);" id="mobNavClose" onclick="myFunction()"><i class="fa fa-times"></i></a> 
+					</div>
+					<div id="myLinks">
+						<a href="index.html">Start</a>
+						<a href="vita.html">Vita</a>
+						<div class="asside">
+							<a href="#">Werke</a>
+							<a href="javascript:void(0);" id="mobSubNavOpen" onclick="mySubFunction()"><i class="fa fa-plus"></i></a>
+							<a href="javascript:void(0);" id="mobSubNavClose" onclick="mySubFunction()"><i class="fa fa-minus"></i></a>
+						</div>
+						<div id="mySubLinks">
+							<a href="naturstudie.html" class="active">Naturstudie</a>
+							<a href="moment.html">Moment</a>
+							<a href="#">Installation</a>
+							<a href="gedanken.html">Gedanken</a>
+						</div>
+						<a href="kontakt.html">Kontakt</a>
+						<a href="#">Datenschutz</a>
+					</div>					
+				</div>	
+			</nav>	
+			
+			<main>
+				<article>
+					<h1 class="content-header">Naturstudie</h1>					
+
+					<div class="imageContainer">
+						<!-- Height of portrait images = 120px; width of landscape images = 120px -->
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2312_NatS_L.jpg" width="120px" onclick="openModal();currentSlide(25)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2311_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(24)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2310_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(23)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2309_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(22)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2308_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(21)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2307_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(20)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2306_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(19)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2305_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(18)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2304_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(17)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2303_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(16)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2302_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(15)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2301_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(14)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2204_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(13)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2203_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(12)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2202_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(11)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2201_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(10)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2104_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(9)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2103_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(8)" id="myImg">
+						</div>
+						<div class="imageColumnL">
+							<img src="projects/Naturstudie/paintings/2102_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(7)" id="myImg">
+						</div>						
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/2101_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(6)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/1905_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(5)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/1904_NatS_L.jpg" width="120px" onclick="openModal();currentSlide(4)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/1903_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(3)" id="myImg">							
+						</div>
+						<div class="imageColumnL">
+							<img src="projects/Naturstudie/paintings/1902_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(2)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Naturstudie/paintings/1901_NatS_P.jpg" height="120px" onclick="openModal();currentSlide(1)" id="myImg">
+						</div>
+					</div>
+
+
+					<!-- The Modal --> 
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+							<!--Scale image height to 450px; adjust image width accordingly-->
+						    <div class="mySlides">						    
+						      <img class="pic" src="projects/Naturstudie/paintings/1901_NatS_P.jpg" alt="Baumknolle, 24x21cm, Tusche auf Papier, 2019" width="319px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Naturstudie/paintings/1902_NatS_P.jpg" alt="Rinde, 24x21cm, Tusche auf Papier, 2019" width="313px" style="max-width:100%; height:auto;">
+						    </div>						    
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Naturstudie/paintings/1903_NatS_P.jpg" alt="Astquerschnitt, 24x21cm, Tusche auf Papier, 2019" width="315px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Naturstudie/paintings/1904_NatS_L.jpg" alt="Samen, 47x96cm, Tusche auf Papier, 2019" width="903px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/1905_NatS_P.jpg" alt="Stengel, 26x17cm, Tusche auf Papier, 2019" width="360px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2101_NatS_P.jpg" alt="Blütenblatt, 32x24cm, Tusche auf Papier, 2021" width="331px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Naturstudie/paintings/2102_NatS_P.jpg" alt="Blütenblatt, 32x24cm, Tusche auf Papier, 2021" width="332px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2103_NatS_P.jpg" alt="Blume, 24x17cm, Tusche auf Papier, 2021" width="338px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2104_NatS_P.jpg" alt="Blume, 30x21cm, Tusche auf Papier, 2021" width="333px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2201_NatS_P.jpg" alt="Ohne Titel, 31x23cm, Tusche auf Papier, 2022" width="334px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2202_NatS_P.jpg" alt="Stengel, 24x17cm, Tusche auf Papier, 2022" width="319px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2203_NatS_P.jpg" alt="Ast, 32x24cm, Tusche auf Papier, 2022" width="339px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2204_NatS_P.jpg" alt="Baum, 32x24cm, Tusche auf Papier, 2022" width="334px" style="max-width:100%; height:auto;">
+						    </div>						    
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2301_NatS_P.jpg" alt="Kirschen, 32x24cm, Tusche auf Papier, 2023" width="345px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2302_NatS_P.jpg" alt="Kirschen, 32x24cm, Tusche auf Papier, 2023" width="332px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2303_NatS_P.jpg" alt="Kirschen, 32x24cm, Tusche auf Papier, 2023" width="333px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2304_NatS_P.jpg" alt="Kirsche, 32x24cm, Tusche auf Papier, 2023" width="336px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2305_NatS_P.jpg" alt="Kirschen, 32x24cm, Tusche auf Papier, 2023" width="331px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2306_NatS_P.jpg" alt="Ohne Titel, 30x21cm, Tusche auf Papier, 2023" width="311px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2307_NatS_P.jpg" alt="Ohne Titel, 30x21cm, Tusche auf Papier, 2023" width="302px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2308_NatS_P.jpg" alt="Ohne Titel, 40x30cm, Tusche auf Papier, 2023" width="347px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2309_NatS_P.jpg" alt="Ohne Titel, 48x46cm, Tusche auf Papier, 2023" width="343px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2310_NatS_P.jpg" alt="Ohne Titel, 40x40cm, Tusche auf Papier, 2023" width="450px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2311_NatS_P.jpg" alt="Ohne Titel, 40x40cm, Tusche auf Papier, 2023" width="444px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Naturstudie/paintings/2312_NatS_L.jpg" alt="Ohne Titel, 30x40cm, Tusche auf Papier, 2023" width="588px" style="max-width:100%; height:auto;">
+						    </div>
+
+						    <a class="prev" onclick="plusSlides(1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(-1)">&#10095;</a>			    
+						 
+						    <div class="caption-container">
+						      <p id="caption"></p>
+						    </div>			 
+						</div> 
+					</div>	
+				</article>
+			</main> 
+			
+			<footer>Copyright &copy 2023 by Hae-Won Park</footer>			
+		
+		</div>
+	</body>
+
+</html>
+
+

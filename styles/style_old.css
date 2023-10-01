@@ -1,0 +1,312 @@
+/* Basic layout for entire webpage*/
+
+html {
+  font-size: 14px; /* px means "pixels": the base font size is now 14 pixels high */
+  font-family: "Open Sans", sans-serif; /* the base font is "sans-serif" (derived from Google Fonts) */
+  background-color: #ffffff; /* this sets a background color for the entire page if not specified otherwise */
+}
+
+
+/* Startpage layout*/
+
+/* Startpage layout for large viewport */
+.startpage {
+  display: grid;
+  grid-template-columns: 1fr 800px 1fr;
+  gap: 20px;
+  grid-template-areas:
+    ". header ."
+    ". navigation ."
+    ". content ."
+    ". footer .";
+}
+
+/* Startpage layout when viewport is <= 800px wide */
+@media screen and (max-width: 800px) {   
+  .startpage {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "content"
+    "footer";
+  }
+}
+
+header {
+  grid-area: header;
+  border: 2px solid rgb(79,185,227);
+  background: yellow;
+  text-align: center;
+}
+
+nav {
+  grid-area: navigation;
+  border: 2px solid rgb(79,185,227);
+}
+
+main {
+  grid-area: content;
+  border: 2px solid rgb(79,185,227);
+  text-align: center;
+}
+
+footer {
+  grid-area: footer;
+  border: 2px solid rgb(79,185,227);
+  text-align: left;
+}
+
+
+/*-----Header formatting-----*/
+
+/* Header formatting for large viewport */
+.site-title {
+  font-weight: bold;
+  font-size: 2rem;
+  background: rgb(255, 0, 0, 0.25);
+  padding: 0px;
+  margin: 5px;
+  border: 2px solid black;
+}
+.content-header{
+  font-weight: bold;
+  font-size: 1.75rem;
+  background: rgb(255, 0, 0, 0.25);
+  padding: 0px;
+  margin: 5px;
+  border: 2px solid black;
+}
+
+/* Header formatting when viewport is <= 800px wide */
+@media screen and (max-width: 800px) {
+  .site-title {
+    font-weight: bold;
+    font-size: calc(1rem + 2vw);  /* Meaning of 1rem: Heanding h1 will be one times the base font size. */
+    background: rgb(255, 0, 0, 0.25);
+    padding: 0px;
+    margin: 5px;
+    border: 2px solid black;
+  }
+
+  .content-header {
+    font-weight: bold;
+    font-size: calc(1rem + 1vw);
+    background: rgb(255, 0, 0, 0.25);
+    padding: 0px;
+    margin: 5px;
+    border: 2px solid black;  
+  }
+} 
+
+
+/*-----Design of the Navigation Bar----- */
+
+/* Add a black background color to the navigation bar */
+.topnav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Ad an active class to highlight the current page */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the "hamburger" icon when viewport is large */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content
+.dropdown {
+  float: left;
+  overflow: hidden;
+}*/
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover, .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+
+/*-----Design of Dropdown Menue within Navigation Bar-----*/
+
+/* Style the dropdown button to fit inside the navigation bar */
+.dropbtn {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.showDropdown {display:block;}
+
+ 
+
+ /*-----Design of Naviagtion Bar for viewport size <= 800 pixels-----*/
+
+ /* When the viewport is <= 800 pixels wide, hide all links, except for the first one ("Start"). Show the "hamburger" icon too. */
+@media screen and (max-width: 800px) {
+  .topnav{
+    display: inline;
+  }
+  .topnav a:not(:first-child), .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: flex;
+  }
+}
+
+/* The "responsive" class is added to the navigation bar with JavaScript when the user clicks on the icon.
+This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 800px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}  
+
+
+/*----- Small image design -----*/
+
+#myImg {
+  border-radius: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+
+/*----- The Modal design -----*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0px;
+  top: 0px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0px;
+  height: 150px;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
