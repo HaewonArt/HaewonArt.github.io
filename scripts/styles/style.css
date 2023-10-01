@@ -1,0 +1,384 @@
+/* Basic layout for entire webpage*/
+
+html {
+  font-size: 14px; /* px means "pixels": the base font size is now 14 pixels high */
+  font-family: Helvetica, sans-serif; /* sans-serif is the fallback font */
+  background-color: #ffffff; /* this sets a background color for the entire page if not specified otherwise */
+}
+
+
+/* Page layout*/
+
+/* Page layout for large viewport */
+.startpage {
+  display: grid;
+  grid-template-columns: 1fr 800px 1fr;
+  gap: 15px;
+  grid-template-areas:
+    ". header ."
+    ". navigation ."
+    ". content ."
+    ". footer .";
+}
+
+/* Page layout when viewport is <= 800px wide */
+@media screen and (max-width: 800px) {   
+  .startpage {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "content"
+    "footer";
+  }
+}
+
+header {
+  grid-area: header;
+  /*border: 2px solid rgb(79,185,227);
+  background: yellow;*/
+  text-align: center;
+}
+
+nav {
+  grid-area: navigation;
+  /*border: 2px solid rgb(79,185,227);*/
+}
+
+main {
+  grid-area: content;
+  /*border: 2px solid rgb(79,185,227);*/
+  text-align: center;
+}
+
+footer {
+  grid-area: footer;
+  /*border: 2px solid rgb(79,185,227);*/
+  text-align: left;
+  background-color: #f8f8f8;
+  font-size: 0.8rem;
+  padding: 2px
+}
+
+
+/*-----Header formatting-----*/
+
+/* Header formatting for large viewport */
+.site-title {
+  font-weight: bold;
+  font-size: 2rem;
+  /*background: rgb(255, 0, 0, 0.25);*/
+  padding: 0px;
+  margin: 7px;
+  /*border: 2px solid black;*/
+  font-family: Times, serif;
+  font-style: italic;
+}
+.content-header{
+  font-weight: normal;
+  font-size: 1.5rem;
+  /*background: rgb(255, 0, 0, 0.25);*/
+  padding: 0px;
+  margin: 7px;
+  /*border: 2px solid black;*/
+}
+
+/* Header and text formatting when viewport is <= 800px wide */
+@media screen and (max-width: 800px) {
+  .site-title {
+    font-weight: italic;
+    font-size: calc(1rem + 2vw);  /* Meaning of 1rem: Heanding h1 will be one times the base font size. */
+    /*background: rgb(255, 0, 0, 0.25);*/
+    padding: 0px;
+    margin: 7px;
+    /*border: 2px solid black;*/
+  }
+
+  .content-header {
+    font-weight: normal;
+    font-size: calc(1rem + 1vw);
+    /*background: rgb(255, 0, 0, 0.25);*/
+    padding: 0px;
+    margin: 7px;
+    /*border: 2px solid black;*/  
+  }
+
+  .description {
+    font-weight: normal;
+    font-size: calc(0.8rem + 0.3vw);
+  }
+} 
+
+
+/*-----Design of the Navigation Bar----- */
+
+/* Add a background color to the navigation bar */
+.navigation {
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.navigation a {
+  float: left;
+  display: block;
+  color: #999999;
+  text-align: center;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  /*background-color: #04AA6D;*/
+  color: #999999;
+  font-weight: bold;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.navigation a:hover, .dropdown:hover, .dropbtn {
+  /*background-color: #555;*/
+  color: #000000;
+}
+
+
+/*-----Design of Dropdown Menu within Navigation Bar-----*/
+
+/* Style the dropdown button to fit inside the navigation bar */
+.dropbtn {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: #999999;
+  padding: 5px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #999999;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-family: inherit;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f8f8f8;
+  color: #000000;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/*-----Mobile Menu within Navigation Bar-----*/
+
+.mobileNav {
+  display: none;
+}
+
+ /*-----Design of Naviagtion Bar for viewport size <= 600 pixels-----*/
+
+ /* When the viewport is <= 600 pixels wide, hide all links, except for the first one ("Start") and show the "hamburger" icon. */
+@media screen and (max-width: 600px) {
+  .navigation {
+  display: none;
+  }
+
+  .mobileNav {
+    display: block;
+    /*justify-content: space-between;*/
+    background-color: #f8f8f8;
+    overflow: hidden;    
+  }
+
+  .rightAlign {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #mobNavClose {
+    display:none;
+  }
+
+  #myLinks {
+    display: none;
+  }
+
+  .mobileNav a {
+    display: block;
+    color: #999999;
+    text-align: left;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .asside {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #mobSubNavClose {
+    display: none;
+  }
+
+  #mySubLinks {
+    display: none;
+  }
+
+  .mobileNav #mySubLinks a {
+    display: block;
+    color: #999999;
+    text-align: left;
+    padding: 5px 35px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+} 
+
+
+/*-----Design of Portrait/ Landscape Image Alignment in "Naturstudie"-----*/
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+}
+
+.imageItem {  
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+
+
+/*----- Design of images in "Naturstudie" -----*/
+
+#myImg {
+  /*border-radius: 1px;*/
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+
+/*----- The Modal design -----*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 75px; /* Location of the box */
+  left: 0px;
+  top: 0px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  /*background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  /*width: 500px;*/
+  display: block;
+  max-width: 800px;
+  height:auto;
+}
+
+.caption-container {
+  text-align: center;
+  /*background-color: black;*/
+  padding: 2px 16px;
+  color: white;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Next and Previous button */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  padding: 10px;
+  /*margin-top: -22px;*/
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  /*transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;*/
+}
+
+/*Position the "next button" to the right*/
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+/*Position the "next button" to the right*/
+.prev{
+  left: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 400px){
+  .modal-content {
+    width: 80%;
+  }
+}
