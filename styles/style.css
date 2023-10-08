@@ -111,6 +111,22 @@ footer {
 } 
 
 
+
+/*-----Button design-----*/
+
+.linkbtn {
+  border: none;
+  text-decoration: none;
+  background-color: inherit;
+  padding: none;
+  font-size: inherit;
+  cursor: pointer;
+  color: green;
+  display: inline-block;
+}
+
+
+
 /*-----Design of the Navigation Bar----- */
 
 /* Add a background color to the navigation bar */
@@ -200,7 +216,7 @@ footer {
   display: none;
 }
 
- /*-----Design of Naviagtion Bar for viewport size <= 600 pixels-----*/
+ /*-----Design of Naviagtion Bar for viewport size width <= 600 pixels-----*/
 
  /* When the viewport is <= 600 pixels wide, hide all links, except for the first one ("Start") and show the "hamburger" icon. */
 @media screen and (max-width: 600px) {
@@ -261,7 +277,7 @@ footer {
 } 
 
 
-/*-----Design of Portrait/ Landscape Image Alignment in "Naturstudie"-----*/
+/*-----Design of portrait/ landscape Image Alignment -----*/
 
 .imageContainer {
   display: flex;
@@ -278,7 +294,7 @@ footer {
 
 
 
-/*----- Design of images in "Naturstudie" -----*/
+/*----- Design of Images -----*/
 
 #myImg {
   /*border-radius: 1px;*/
@@ -376,8 +392,8 @@ footer {
 }
 
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 400px){
+/* 80% Image Width on Smaller Screens */
+@media only screen and (max-width: 500px){
   .modal-content {
     width: 80%;
   }
