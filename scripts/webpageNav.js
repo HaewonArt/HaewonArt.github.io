@@ -1,13 +1,19 @@
-//-----Navigation bar on small screen-----
+//-----Navigation bar on mobile phone-----
 
 function myFunction() {
   var x = document.getElementById("myLinks");
+  var x_sub = document.getElementById("mySubLinks");
   var y = document.getElementById("mobNavClose");
+  var y_sub = document.getElementById("mobSubNavClose");
   var z = document.getElementById("mobNavOpen");
+  var z_sub = document.getElementById("mobSubNavOpen");
   if (x.style.display === "block") {
     x.style.display = "none";
+    x_sub.style.display = "none";
     y.style.display = "none";
+    y_sub.style.display = "none";
     z.style.display = "flex";
+    z_sub.style.display = "flex";
   } else {
     x.style.display = "block";
     y.style.display = "flex";
@@ -16,17 +22,17 @@ function myFunction() {
 }
 
 function mySubFunction() {
-  var x = document.getElementById("mySubLinks");
-  var y = document.getElementById("mobSubNavClose");
-  var z = document.getElementById("mobSubNavOpen");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-    y.style.display = "none";
-    z.style.display = "flex";
+  var x_sub = document.getElementById("mySubLinks");
+  var y_sub = document.getElementById("mobSubNavClose");
+  var z_sub = document.getElementById("mobSubNavOpen");
+  if (x_sub.style.display === "block") {
+    x_sub.style.display = "none";
+    y_sub.style.display = "none";
+    z_sub.style.display = "flex";
   } else {
-    x.style.display = "block";
-    y.style.display = "flex";
-    z.style.display = "none";
+    x_sub.style.display = "block";
+    y_sub.style.display = "flex";
+    z_sub.style.display = "none";
   }
 }
 
