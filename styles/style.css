@@ -1,8 +1,8 @@
 /* Basic layout for entire webpage*/
 
 html {
-  font-size: 14px; /* px means "pixels": the base font size is now 14 pixels high */
-  font-family: Helvetica, sans-serif; /* sans-serif is the fallback font */
+  font-size: 12px; /* px means "pixels": the base font size is now 14 pixels high */
+  font-family: Fira Sans /*Helvetica*/, sans-serif; /* sans-serif is the fallback font */
   background-color: #ffffff; /* this sets a background color for the entire page if not specified otherwise */
 }
 
@@ -54,8 +54,8 @@ main {
 
 footer {
   grid-area: footer;
-  /*border: 2px solid rgb(79,185,227);*/
-  text-align: left;
+  /*border: 2px solid rgb(79,185,227);
+  text-align: left;*/
   background-color: #f8f8f8;
   font-size: 0.8rem;
   padding: 2px
@@ -106,7 +106,7 @@ footer {
 
   .description {
     font-weight: normal;
-    font-size: calc(0.8rem + 0.3vw);
+    font-size: calc(0.8rem + 0.2vw);
   }
 } 
 
@@ -132,7 +132,8 @@ footer {
 /* Add a background color to the navigation bar */
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   background-color: #f8f8f8;
   overflow: hidden;
 }
@@ -140,7 +141,7 @@ footer {
 /* Style the links inside the navigation bar */
 .navigation a {
   float: left;
-  display: block;
+  /*display: flex;*/
   color: #999999;
   text-align: center;
   padding: 5px 16px;
@@ -161,6 +162,12 @@ footer {
   color: #000000;
 }
 
+/*HAEWON PARK formatting*/
+a.split{
+  margin-right: auto;
+  font-size: 2.5rem;
+  pointer-events: none;
+}
 
 /*-----Design of Dropdown Menu within Navigation Bar-----*/
 
@@ -236,6 +243,12 @@ footer {
     justify-content: flex-end;
   }
 
+  .equalSpacing {
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
   #mobNavClose {
     display:none;
   }
@@ -287,9 +300,15 @@ footer {
   background-color: white;
 }
 
-.imageItem {  
-  margin-left: 2px;
-  margin-right: 2px;
+.imageItem {
+  display: flex;
+  align-items: center;
+  border: 2px solid lightgray;
+  padding: 2px;
+  height: 124px;
+  margin: 25px 10px;
+  /*margin-left: 2px;
+  margin-right: 2px;*/
 }
 
 
