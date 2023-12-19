@@ -1,2 +1,2 @@
 # HaewonArt.github.io
-Haewon's webpage
+Haewon's webpage showing her works of art.
