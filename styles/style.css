@@ -1,19 +1,19 @@
 /* Basic layout for entire webpage*/
 
 html {
-  font-size: 12px; /* px means "pixels": the base font size is now 14 pixels high */
+  font-size: 12px; /* px means "pixels": the base font size is now 12 pixels high */
   font-family: Fira Sans /*Helvetica*/, sans-serif; /* sans-serif is the fallback font */
-  background-color: #ffffff; /* this sets a background color for the entire page if not specified otherwise */
+  background-color: #e8eae3; /* this sets a background color for the entire page if not specified otherwise */
 }
 
 
-/* Page layout*/
+/*----- Page layout -----*/
 
 /* Page layout for large viewport */
 .startpage {
   display: grid;
   grid-template-columns: 1fr 800px 1fr;
-  gap: 15px;
+  gap: 0px;
   grid-template-areas:
     ". header ."
     ". navigation ."
@@ -25,7 +25,7 @@ html {
 @media screen and (max-width: 800px) {   
   .startpage {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 0px;
     grid-template-areas:
     "header"
     "navigation"
@@ -44,31 +44,35 @@ header {
 nav {
   grid-area: navigation;
   /*border: 2px solid rgb(79,185,227);*/
+  background-color: #bbbbbc;
 }
 
 main {
   grid-area: content;
   /*border: 2px solid rgb(79,185,227);*/
   text-align: center;
+  /*background-color: #e8eae3;*/
 }
 
 footer {
   grid-area: footer;
   /*border: 2px solid rgb(79,185,227);
   text-align: left;*/
-  background-color: #f8f8f8;
+  background-color: #bbbbbc;
   font-size: 0.8rem;
-  padding: 2px
+  padding: 5px;
+  border-top: 2px solid black;
+  color: white;
 }
 
 
-/*-----Header formatting-----*/
+/*-----Header and text formatting-----*/
 
-/* Header formatting for large viewport */
+/* Header and text formatting for large viewport */
 .site-title {
   font-weight: bold;
   font-size: 2rem;
-  /*background: rgb(255, 0, 0, 0.25);*/
+  /*background-color: #ffffff;*/
   padding: 0px;
   margin: 7px;
   /*border: 2px solid black;*/
@@ -78,8 +82,8 @@ footer {
 .content-header{
   font-weight: normal;
   font-size: 1.5rem;
-  /*background: rgb(255, 0, 0, 0.25);*/
-  padding: 0px;
+  background: #e8eae3;
+  padding-top: 10px;
   margin: 7px;
   /*border: 2px solid black;*/
 }
@@ -121,7 +125,7 @@ footer {
   padding: none;
   font-size: inherit;
   cursor: pointer;
-  color: green;
+  color: black;
   display: inline-block;
 }
 
@@ -134,15 +138,16 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  background-color: #f8f8f8;
+  /*background-color: #DDD0C8;*/
   overflow: hidden;
+  border-bottom: 2px solid black;
 }
 
 /* Style the links inside the navigation bar */
 .navigation a {
   float: left;
   /*display: flex;*/
-  color: #999999;
+  color: white;
   text-align: center;
   padding: 5px 16px;
   text-decoration: none;
@@ -151,15 +156,15 @@ footer {
 
 /* Add an active class to highlight the current page */
 .active {
-  /*background-color: #04AA6D;*/
-  color: #999999;
+  /*background-color: #04AA6D;
+  color: black;*/
   font-weight: bold;
 }
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .navigation a:hover, .dropdown:hover, .dropbtn {
   /*background-color: #555;*/
-  color: #000000;
+  color: black;
 }
 
 /*HAEWON PARK formatting*/
@@ -169,6 +174,8 @@ a.split{
   pointer-events: none;
 }
 
+
+
 /*-----Design of Dropdown Menu within Navigation Bar-----*/
 
 /* Style the dropdown button to fit inside the navigation bar */
@@ -176,7 +183,7 @@ a.split{
   font-size: 1rem;
   border: none;
   outline: none;
-  color: #999999;
+  color: white;
   padding: 5px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -187,7 +194,7 @@ a.split{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f8f8f8;
+  background-color: #bbbbbc;
   min-width: 130px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -196,7 +203,7 @@ a.split{
 /* Style the links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: #999999;
+  color: white;
   padding: 10px 16px;
   text-decoration: none;
   display: block;
@@ -206,7 +213,7 @@ a.split{
 
 /* Add a grey background to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #f8f8f8;
+  background-color: #bbbbbc;
   color: #000000;
 }
 
@@ -234,7 +241,7 @@ a.split{
   .mobileNav {
     display: block;
     /*justify-content: space-between;*/
-    background-color: #f8f8f8;
+    background-color: #bbbbbc;
     overflow: hidden;    
   }
 
@@ -259,7 +266,7 @@ a.split{
 
   .mobileNav a {
     display: block;
-    color: #999999;
+    color: white;
     text-align: left;
     padding: 5px 16px;
     text-decoration: none;
@@ -281,7 +288,7 @@ a.split{
 
   .mobileNav #mySubLinks a {
     display: block;
-    color: #999999;
+    color: white;
     text-align: left;
     padding: 5px 35px;
     text-decoration: none;
@@ -297,13 +304,13 @@ a.split{
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  background-color: white;
+  background-color: #e8eae3;
 }
 
 .imageItem {
   display: flex;
   align-items: center;
-  border: 2px solid lightgray;
+  border: 1px solid black;
   padding: 2px;
   height: 124px;
   margin: 25px 10px;
@@ -405,15 +412,133 @@ a.split{
 }
 
 /*Position the "next button" to the right*/
-.prev{
+.prev {
   left: 0px;
   border-radius: 3px 0 0 3px;
 }
 
 
 /* 80% Image Width on Smaller Screens */
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
   .modal-content {
     width: 80%;
   }
+}
+
+
+
+/*----- The index page design -----*/
+
+.indexpage-background {
+  background-image: url(2102_NatS_P.jpg);
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.indexpage-text {
+  text-align: left;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  /*transform: translate(-50%, -50%);*/
+  color: #FFFFE0;
+  font-size: 2rem;
+  font-family: "brush script";
+  padding: 7px;
+}
+
+/* Index page formatting when viewport is <= 800px wide */
+@media screen and (max-width: 800px) {
+  .indexpage-text {    
+    font-size: calc(1rem + 1.5vw);
+  }
+}
+
+
+/*----- The vita page design -----*/
+
+.vitapage-background {
+  background-image: url(2304_Mom_P.jpg);
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.vitapage-text {
+  text-align: justify;
+  text-justify: inter-word;
+  /* position: absolute;
+  top: 0%
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 0px 20px;
+}
+
+.vitapage-header {
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 17px 0px;
+  color: #FFFFFF;
+}
+
+
+/*----- The kontakt page design -----*/
+
+.kontaktpage-background {
+  background-image: url(1904_NatS_L.jpg);
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.kontaktpage-text {
+  text-align: justify;
+  text-justify: inter-word;
+  /* position: absolute;
+  top: 0%
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  color: #000000;
+  font-size: 1rem;
+  padding: 0px 20px;
+}
+
+.kontaktpage-header {
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 17px 0px;
+  color: #000000;
+}
+
+
+/*----- The aktuell page design -----*/
+
+.aktuellpage-background {
+  /*background-image: url(1904_NatS_L.jpg);*/
+  background-size: cover;
+  /*height: 500px;*/
+  position: relative;
+  background-color: #e8eae3;
+}
+
+.aktuellpage-text {
+  text-align: center;
+  text-justify: inter-word;
+  /* position: absolute;
+  top: 0%
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  color: #000000;
+  font-size: 1rem;
+  padding: 0px 20px;
+}
+
+.aktuellpage-header {
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 17px 0px;
+  color: #000000;
 }
