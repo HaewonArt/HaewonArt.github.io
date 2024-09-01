@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Haewon Park</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Diese Webseite zeigt die Kunstwerke von Haewon Park" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />  document font -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="2203_Mom_P.ico" type="image/x-icon" />
+		<script src="scripts/webpageNav.js" defer></script>
+	</head>
+
+	<body dir="ltr">
+		<div class="startpage">
+		
+		<script>/* ---Uncomment below section---	
+			<header>
+				<h1 class="site-title">Haewon Park</h1>
+			</header>		
+		*/</script>
+
+			<nav>
+				<!-- Navigation bar for computer/ laptop -->
+				<div class="navigation" id="myTopnav">
+					<a href="#" class="split">HAEWON <b style="color: black">PARK</b></a>							
+					<a href="index.html">START</a>
+					<a href="vita.html">VITA</a>
+					<div class="dropdown">
+						<!-- <a href="#">Werke <i class="fa fa-caret-down"></i></a> -->
+						<button onclick="openDropdown()" class="dropbtn">WERKE <i class="fa fa-angle-down"></i></button> <!-- <i class="fa fa-caret-down"></i></button> -->
+						<div id="drop" class="dropdown-content">
+							<a href="gedanken.html">Gedanken</a>
+							<a href="naturstudie.html">Naturstudie</a>
+							<a href="moment.html" class="active">Moment</a>
+							<!-- <a href="#">Installation</a> -->							
+						</div>
+					</div>
+					<a href="aktuelles.html">AKTUELL</a>				
+					<a href="kontakt.html">KONTAKT</a>
+					<!-- <a href="#">Datenschutz</a> -->											
+				</div>
+				<!-- Navigation bar for mobile phones-->
+				<div class="mobileNav">
+					<div class="equalSpacing">
+						<a href="#" style="font-size: 2rem;">HAEWON <b style="color: black;">PARK</b></a>						
+						<a href="javascript:void(0);" id="mobNavOpen" onclick="myFunction()"><i class="fa fa-bars"></i></a> 
+						<a href="javascript:void(0);" id="mobNavClose" onclick="myFunction()"><i class="fa fa-times"></i></a> 
+					</div>
+					<div id="myLinks">
+						<a href="index.html" class="active">START</a>
+						<a href="vita.html">VITA</a>
+						<div class="asside">
+							<a href="gedanken.html">WERKE</a>
+							<a href="javascript:void(0);" id="mobSubNavOpen" onclick="mySubFunction()"><i class="fa fa-plus"></i></a>
+							<a href="javascript:void(0);" id="mobSubNavClose" onclick="mySubFunction()"><i class="fa fa-minus"></i></a>
+						</div>												
+						
+						<script>/* ---Uncomment below section---
+						<div>
+							<!-- <a href="gedanken.html">Werke</a> -->
+							<a href="javascript:void(0);" id="mobSubNavOpen" onclick="mySubFunction()">Werke<i class="fa-fw fa fa-caret-down"></i></a>
+							<a href="javascript:void(0);" id="mobSubNavClose" onclick="mySubFunction()">Werke<i class="fa-fw fa fa-caret-up"></i></a>
+						</div>
+						*/</script>	
+						
+						<div id="mySubLinks">
+							<a href="gedanken.html">Gedanken</a>
+							<a href="naturstudie.html">Naturstudie</a>
+							<a href="moment.html" class="active">Moment</a>
+							<!-- <a href="#">Installation</a> -->							
+						</div>
+						<a href="aktuelles.html">AKTUELL</a>
+						<a href="kontakt.html">KONTAKT</a>
+						<!-- <a href="#">Datenschutz</a> -->
+					</div>					
+				</div>	
+			</nav>	
+			
+			<main>
+				<article>
+					<h1 class="content-header">Moment</h1>					
+
+					<div class="imageContainer">
+						<!-- Height of portrait images = 120px; width of landscape images = 120px -->
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/022-mom-l-k.jpg" onclick="openModal();currentSlide(34)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/021-mom-l-k.jpg" onclick="openModal();currentSlide(33)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/029-mom-l-k.jpg" onclick="openModal();currentSlide(32)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/028-mom-p-k.jpg" onclick="openModal();currentSlide(31)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/027-mom-p-k.jpg" onclick="openModal();currentSlide(30)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/005-mom-p-k.jpg" onclick="openModal();currentSlide(29)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/036-mom-p-k.jpg" onclick="openModal();currentSlide(28)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/006-mom-p-k.jpg" onclick="openModal();currentSlide(27)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/034-mom-l-k.jpg" onclick="openModal();currentSlide(26)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/010-mom-l-k.jpg" onclick="openModal();currentSlide(25)" id="myImg">
+						</div>						
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/009-mom-l-k.jpg" onclick="openModal();currentSlide(24)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/008-mom-p-k.jpg" onclick="openModal();currentSlide(23)" id="myImg">
+						</div>						
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/011-mom-p-k.jpg" onclick="openModal();currentSlide(22)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/004-mom-p-k.jpg" onclick="openModal();currentSlide(21)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/015-mom-p-k.jpg" onclick="openModal();currentSlide(20)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/014-mom-p-k.jpg" onclick="openModal();currentSlide(19)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/003-mom-l-k.jpg" onclick="openModal();currentSlide(18)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/002-mom-p-k.jpg" onclick="openModal();currentSlide(17)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/031-mom-p-k.jpg" onclick="openModal();currentSlide(16)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/013-mom-p-k.jpg" onclick="openModal();currentSlide(15)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/012-mom-p-k.jpg" onclick="openModal();currentSlide(14)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/020-mom-l-k.jpg" onclick="openModal();currentSlide(13)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/026-mom-p-k.jpg" onclick="openModal();currentSlide(12)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/030-mom-l-k.jpg" onclick="openModal();currentSlide(11)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/017-mom-p-k.jpg" onclick="openModal();currentSlide(10)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/024-mom-p-k.jpg" onclick="openModal();currentSlide(9)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/016-mom-p-k.jpg" onclick="openModal();currentSlide(8)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/018-mom-p-k.jpg" onclick="openModal();currentSlide(7)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/019-mom-p-k.jpg" onclick="openModal();currentSlide(6)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/033-mom-p-k.jpg" onclick="openModal();currentSlide(5)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/025-mom-p-k.jpg" onclick="openModal();currentSlide(4)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/032-mom-p-k.jpg" onclick="openModal();currentSlide(3)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/037-mom-l-k.jpg" onclick="openModal();currentSlide(2)" id="myImg">
+						</div>
+						<div class="imageItem">
+							<img src="projects/Moment/image_small/035-mom-p-k.jpg" onclick="openModal();currentSlide(1)" id="myImg">
+						</div>
+					</div>
+
+
+					<!-- The Modal --> 
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+							<!--Scale image height to 450px; adjust image width accordingly-->							
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/035-mom-p-g.jpg" alt="Moment, 30x24cm, Collage, 2021" width="307px" style="max-width:100%; height:auto;"> 
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Moment/image_big/037-mom-l-g.jpg" alt="Moment, 24x32cm, Collage, 2021" width="602px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/032-mom-p-g.jpg" alt="Moment, 32x24cm, Collage, 2021" width="345px" style="max-width:100%; height:auto;">
+						    </div>						    
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/025-mom-p-g.jpg" alt="Moment, 32x24cm, Collage, 2021" width="345px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/033-mom-p-g.jpg" alt="Moment, 32x24cm, Collage, 2021" width="337px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						     
+						      <img class="pic" src="projects/Moment/image_big/019-mom-p-g.jpg" alt="Moment, 40x30cm, Mischtechnik, 2021" width="306px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/018-mom-p-g.jpg" alt="Moment, 40x30cm, Mischtechnik, 2021" width="311px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/016-mom-p-g.jpg" alt="Moment, 40x30cm, Mischtechnik, 2021" width="343px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/024-mom-p-g.jpg" alt="Moment, 50x40cm, Mischtechnik, 2021" width="363px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/017-mom-p-g.jpg" alt="Moment, 40x30cm, Mischtechnik, 2022" width="365px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/030-mom-l-g.jpg" alt="Moment, 60x80cm, Mischtechnik, 2022" width="593px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/026-mom-p-g.jpg" alt="Moment, 32x24cm, Tusche auf Papier, 2022" width="334px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">
+						      <img class="pic" src="projects/Moment/image_big/020-mom-l-g.jpg" alt="Moment, 24x32cm, Acryl auf Papier, 2023" width="633px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/012-mom-p-g.jpg" alt="Moment, 40x30cm, Tusche auf Papier, 2023" width="327px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/013-mom-p-g.jpg" alt="Moment, 40x30cm, Tusche auf Papier, 2023" width="337px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/031-mom-p-g.jpg" alt="Moment, 40x30cm, Tusche auf Papier, 2023" width="345px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/002-mom-p-g.jpg" alt="Moment, 40x30cm, Tusche auf Papier, 2023" width="363px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/003-mom-l-g.jpg" alt="Moment, 40x80cm, Tusche auf Papier, 2023" width="904px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/014-mom-p-g.jpg" alt="Moment, 24x21cm, Tusche auf Papier, 2023" width="303px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/015-mom-p-g.jpg" alt="Moment, 24x21cm, Tusche auf Papier, 2023" width="301px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/004-mom-p-g.jpg" alt="Moment, 24x21cm, Tusche auf Papier, 2023" width="307px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/011-mom-p-g.jpg" alt="Moment, 40x30cm, Mischtechnik, 2023" width="342px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/008-mom-p-g.jpg" alt="Moment, 32x24cm, Tusche auf Papier, 2023" width="327px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/009-mom-l-g.jpg" alt="Moment, 30x40cm, Tusche auf Papier, 2023" width="620px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/010-mom-l-g.jpg" alt="Moment, 32x72cm, Tusche auf Papier, 2022" width="1042px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/034-mom-l-g.jpg" alt="Moment, 40x60cm, Papier auf Leinwand, 2022" width="661px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/006-mom-p-g.jpg" alt="Moment, 50x40cm, Tusche auf Papier, 2024" width="346px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/036-mom-p-g.jpg" alt="Moment, 40x30cm, Tusche auf Papier, 2024" width="339px" style="max-width:100%; height:auto;">
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/005-mom-p-g.jpg" alt="Moment, 50x40cm, Tusche auf Papier, 2024" width="346px" style="max-width:100%; height:auto;"> 
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/027-mom-p-g.jpg" alt="Moment, 31x24cm, Acryl auf Papier, 2021" width="333px" style="max-width:100%; height:auto;"> 
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/028-mom-p-g.jpg" alt="Moment, 31x24cm, Acryl auf Papier, 2021" width="338px" style="max-width:100%; height:auto;"> 
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/029-mom-l-g.jpg" alt="Moment, 50x60cm, Mischtechnik, 2021" width="562px" style="max-width:100%; height:auto;"> 
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/021-mom-l-g.jpg" alt="Moment, 50x70cm, Tusche auf Papier, 2024" width="545px" style="max-width:100%; height:auto;"> 
+						    </div>
+						    <div class="mySlides">						      
+						      <img class="pic" src="projects/Moment/image_big/022-mom-l-g.jpg" alt="Moment, 30x60cm, Tusche auf Papier, 2024" width="904px" style="max-width:100%; height:auto;"> 
+						    </div>
+
+						    <a class="prev" onclick="plusSlides(1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(-1)">&#10095;</a>			    
+						 
+						    <div class="caption-container">
+						      <p id="caption"></p>
+						    </div>			 
+						</div> 
+					</div>	
+				</article>
+			</main> 
+			
+			<footer>Copyright &copy 2023 by Haewon Park</footer>			
+		
+		</div>
+	</body>
+
+</html>
+
+

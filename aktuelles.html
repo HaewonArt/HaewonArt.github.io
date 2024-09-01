@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Haewon Park</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Diese Webseite zeigt die Kunstwerke von Haewon Park" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" /> <!-- document font -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="2203_Mom_P.ico" type="image/x-icon" />
+		<script src="scripts/webpageNav.js" defer></script>
+	</head>
+
+	<body dir="ltr">
+		<div class="startpage">
+		
+			<script>/* ---Uncomment below section---	
+			<header>
+				<h1 class="site-title">Haewon Park</h1>
+			</header>		
+			*/</script>
+
+			<nav>
+				<!-- Navigation bar for computer/ laptop -->
+				<div class="navigation" id="myTopnav">
+					<a href="#" class="split">HAEWON <b style="color: black">PARK</b></a>							
+					<a href="index.html">START</a>
+					<a href="vita.html">VITA</a>
+					<div class="dropdown">
+						<!-- <a href="#">Werke <i class="fa fa-caret-down"></i></a> -->
+						<button onclick="openDropdown()" class="dropbtn">WERKE <i class="fa fa-angle-down"></i></button> <!-- <i class="fa fa-caret-down"></i></button> -->
+						<div id="drop" class="dropdown-content">
+							<a href="gedanken.html">Gedanken</a>
+							<a href="naturstudie.html">Naturstudie</a>
+							<a href="moment.html">Moment</a>
+							<!-- <a href="#">Installation</a> -->							
+						</div>
+					</div>
+					<a href="aktuelles.html" class="active">AKTUELL</a>				
+					<a href="kontakt.html">KONTAKT</a>
+					<!-- <a href="#">Datenschutz</a> -->											
+				</div>
+				<!-- Navigation bar for mobile phones-->
+				<div class="mobileNav">
+					<div class="equalSpacing">
+						<a href="#" style="font-size: 2rem;">HAEWON <b style="color: black;">PARK</b></a>						
+						<a href="javascript:void(0);" id="mobNavOpen" onclick="myFunction()"><i class="fa fa-bars"></i></a> 
+						<a href="javascript:void(0);" id="mobNavClose" onclick="myFunction()"><i class="fa fa-times"></i></a> 
+					</div>
+					<div id="myLinks">
+						<a href="index.html" class="active">START</a>
+						<a href="vita.html">VITA</a>
+						<div class="asside">
+							<a href="gedanken.html">WERKE</a>
+							<a href="javascript:void(0);" id="mobSubNavOpen" onclick="mySubFunction()"><i class="fa fa-plus"></i></a>
+							<a href="javascript:void(0);" id="mobSubNavClose" onclick="mySubFunction()"><i class="fa fa-minus"></i></a>
+						</div>											
+						
+						<script>/* ---Uncomment below section---
+						<div>
+							<!-- <a href="gedanken.html">Werke</a> -->
+							<a href="javascript:void(0);" id="mobSubNavOpen" onclick="mySubFunction()">Werke<i class="fa-fw fa fa-caret-down"></i></a>
+							<a href="javascript:void(0);" id="mobSubNavClose" onclick="mySubFunction()">Werke<i class="fa-fw fa fa-caret-up"></i></a>
+						</div>
+						*/</script>	
+						
+						<div id="mySubLinks">
+							<a href="gedanken.html">Gedanken</a>
+							<a href="naturstudie.html">Naturstudie</a>
+							<a href="moment.html">Moment</a>
+							<!-- <a href="#">Installation</a> -->							
+						</div>
+						<a href="aktuelles.html" class="active">AKTUELL</a>
+						<a href="kontakt.html">KONTAKT</a>
+						<!-- <a href="#">Datenschutz</a> -->
+					</div>					
+				</div>	
+			</nav>		
+			
+			<main>
+				<article>
+					<div class="aktuellpage-background">
+						<div class="aktuellpage-header">Aktuelles</div>
+							<div class="aktuellpage-text">
+								<br><b>2024</b><br>
+								<br><br>
+								15th Anniversary Special Exhibition<br>
+								01.09. - 12.09. - Seoul/ Suedkorea<br>
+								<img src="exhibition/2024/15th_Anniversary.jpg" width="150px"><br>
+								<br><br>
+								BBK, Ausstellung der Mitglieder<br>
+								30.06. - 21.07. - Karlsruhe<br>
+								<img src="exhibition/2024/BBK_Mitgliedershow2024.jpg" width="150px"><br>
+								<br><br>
+								Kunst im Schlosspark<br>
+								07.07. - Riet<br>
+								<img src="exhibition/2024/riet2024.jpg" width="300px"><br>
+								<br><br>
+								Paper Play, Druckgrafik im Kabinett<br>
+								16.03. - 14.04. - Karlsruhe<br>								
+								<img src="exhibition/2024/paperplay.jpg" width="150px"><br>
+								<br>								
+							</div>
+					</div>
+				</article>
+			</main> 
+			
+			<footer>Copyright &copy 2023 by Haewon Park</footer>			
+		
+		</div>
+	</body>
+
+</html>
