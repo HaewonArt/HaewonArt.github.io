@@ -1,7 +1,7 @@
 /* Basic layout for entire webpage*/
 
 html {
-  font-size: 12px; /* px means "pixels": the base font size is now 12 pixels high */
+  font-size: 14px; /* px means "pixels": the base font size is now 12 pixels high */
   font-family: Fira Sans /*Helvetica*/, sans-serif; /* sans-serif is the fallback font */
   background-color: #e8eae3; /* this sets a background color for the entire page if not specified otherwise */
 }
@@ -92,7 +92,7 @@ footer {
 @media screen and (max-width: 800px) {
   .site-title {
     font-weight: italic;
-    font-size: calc(1rem + 2vw);  /* Meaning of 1rem: Heanding h1 will be one times the base font size. */
+    font-size: calc(1rem + 2vw);  /* Meaning of 1rem: Heading h1 will be one times the base font size. */
     /*background: rgb(255, 0, 0, 0.25);*/
     padding: 0px;
     margin: 7px;
@@ -110,7 +110,7 @@ footer {
 
   .description {
     font-weight: normal;
-    font-size: calc(0.8rem + 0.2vw);
+    font-size: calc(1rem + 0.2vw);
   }
 } 
 
@@ -230,10 +230,10 @@ a.split{
   display: none;
 }
 
- /*-----Design of Naviagtion Bar for viewport size width <= 600 pixels-----*/
+ /*-----Design of Naviagtion Bar for viewport size width <= 800 pixels-----*/
 
- /* When the viewport is <= 600 pixels wide, hide all links, except for the first one ("Start") and show the "hamburger" icon. */
-@media screen and (max-width: 600px) {
+ /* When the viewport is <= 800 pixels wide, hide all links, except for the first one ("Start") and show the "hamburger" icon. */
+@media screen and (max-width: 800px) {
   .navigation {
   display: none;
   }
@@ -270,7 +270,7 @@ a.split{
     text-align: left;
     padding: 5px 16px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .asside {
@@ -292,8 +292,8 @@ a.split{
     text-align: left;
     padding: 5px 35px;
     text-decoration: none;
-    font-size: 1rem;
-  }
+    font-size: 2rem;
+  } 
 } 
 
 
@@ -430,7 +430,7 @@ a.split{
 /*----- The index page design -----*/
 
 .indexpage-background {
-  background-image: url(2102_NatS_P.jpg);
+  background-image: url(120-nat-p-g.jpg);
   background-size: cover;
   height: 500px;
   position: relative;
