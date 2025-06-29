@@ -1,7 +1,7 @@
 /* Basic layout for entire webpage*/
 
 html {
-  font-size: 14px; /* px means "pixels": the base font size is now 12 pixels high */
+  font-size: 14px; /* px means "pixels": the base font size is now 14 pixels high */
   font-family: Fira Sans /*Helvetica*/, sans-serif; /* sans-serif is the fallback font */
   background-color: #e8eae3; /* this sets a background color for the entire page if not specified otherwise */
 }
@@ -69,21 +69,21 @@ footer {
 /*-----Header and text formatting-----*/
 
 /* Header and text formatting for large viewport */
-.site-title {
+/*.site-title {
   font-weight: bold;
   font-size: 2rem;
   /*background-color: #ffffff;*/
-  padding: 0px;
+  /*padding: 0px;
   margin: 7px;
   /*border: 2px solid black;*/
-  font-family: Times, serif;
+  /*font-family: Times, serif;
   font-style: italic;
-}
+}*/
 .content-header{
   font-weight: normal;
   font-size: 1.5rem;
   background: #e8eae3;
-  padding-top: 10px;
+  padding-top: 10px 0px;
   margin: 7px;
   /*border: 2px solid black;*/
 }
@@ -96,16 +96,16 @@ footer {
     /*background: rgb(255, 0, 0, 0.25);*/
     padding: 0px;
     margin: 7px;
-    /*border: 2px solid black;*/
+    border: 2px solid black;
   }
 
   .content-header {
     font-weight: normal;
-    font-size: calc(1rem + 1vw);
+    /*font-size: calc(1rem + 1vw);*/
     /*background: rgb(255, 0, 0, 0.25);*/
-    padding: 0px;
+    padding-top: 10px 0px;
     margin: 7px;
-    /*border: 2px solid black;*/  
+    /* border: 2px solid black;*/ 
   }
 
   .description {
@@ -125,7 +125,8 @@ footer {
   padding: none;
   font-size: inherit;
   cursor: pointer;
-  color: black;
+  /*color: black;*/
+  color: #434646;
   display: inline-block;
 }
 
@@ -427,41 +428,44 @@ a.split{
 
 
 
-/*----- The index page design -----*/
+/*----- The "Start (index)" page design -----*/
 
 .indexpage-background {
-  background-image: url(120-nat-p-g.jpg);
+  background-image: url(006-mom-p-g.jpg);
   background-size: cover;
-  height: 500px;
+  height: 500px; /* height is fixed at 500 pixel. */
   position: relative;
 }
 
 .indexpage-text {
-  text-align: left;
+  /*text-align: right;*/
+  writing-mode: vertical-lr;
+  text-orientation: upright;
   position: absolute;
-  top: 0%;
-  left: 50%;
+  bottom: 0%;
+  left: 85%;
   /*transform: translate(-50%, -50%);*/
-  color: #FFFFE0;
-  font-size: 2rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: bold;
   font-family: "brush script";
   padding: 7px;
 }
 
-/* Index page formatting when viewport is <= 800px wide */
+/* Index page formatting when viewport is <= 800px wide
 @media screen and (max-width: 800px) {
   .indexpage-text {    
-    font-size: calc(1rem + 1.5vw);
+    font-size: calc(1.5rem + 1.5vw);
   }
-}
+} */
 
 
-/*----- The vita page design -----*/
+/*----- The "Vita" page design -----*/
 
 .vitapage-background {
   background-image: url(2304_Mom_P.jpg);
   background-size: cover;
-  height: 500px;
+  min-height: 500px; /* height is 500 pixel or more. */
   position: relative;
 }
 
@@ -485,12 +489,12 @@ a.split{
 }
 
 
-/*----- The kontakt page design -----*/
+/*----- The "Kontakt" page design -----*/
 
 .kontaktpage-background {
   background-image: url(1904_NatS_L.jpg);
   background-size: cover;
-  height: 500px;
+  min-height: 500px; 
   position: relative;
 }
 
@@ -514,7 +518,36 @@ a.split{
 }
 
 
-/*----- The aktuell page design -----*/
+/*----- The "Gedanken" page design -----*/
+
+.gedankenpage-background {
+  background-image: url(030-mom-l-g.jpg);
+  background-size: cover;
+  min-height: 500px;
+  position: relative;
+}
+
+.gedankenpage-text {
+  text-align: justify;
+  text-justify: inter-word;
+  /* position: absolute;
+  top: 0%
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  color: #434646;
+  font-size: 1rem;
+  padding: 0px 20px;
+}
+
+.gedankenpage-header {
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 17px 0px;
+  color: #434646;
+}
+
+
+/*----- The "Aktuelles" page design -----*/
 
 .aktuellpage-background {
   /*background-image: url(1904_NatS_L.jpg);*/
